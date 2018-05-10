@@ -35,11 +35,13 @@ static void onMouse(int event, int x, int y, int, void*)
 
 	switch (event)
 	{
+	// 鼠标按下
 	case EVENT_LBUTTONDOWN:
 		origin = Point(x, y);
 		selection = Rect(x, y, 0, 0);
 		selectObject = true;
 		break;
+	// 鼠标抬起
 	case EVENT_LBUTTONUP:
 		selectObject = false;
 		if (selection.width > 0 && selection.height > 0)
